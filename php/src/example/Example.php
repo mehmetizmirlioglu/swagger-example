@@ -11,10 +11,13 @@ class Example
         {
             case "add":
                 $this->add();
+                break;
             case "update":
                 $this->update();
+                break;
             case "delete":
                 $this->delete();
+                break;
         }
     }
 
