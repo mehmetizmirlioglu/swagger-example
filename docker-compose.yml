@@ -8,3 +8,9 @@ services:
     ports:
       - 8000:80
       - 8001:81
+    command: sh -c "a2enmod rewrite && apache2-foreground"
+  composer:
+    image: composer:2.3.10
+    command: "composer install"
+    volumes:
+      - ./php/src:/app
