@@ -40,8 +40,20 @@ class Example
      *         )
      *       )
      *     ),
-     *     @OA\Response(response="200", description="The adding process completed successfully."),
-     *     @OA\Response(response="400", description="The adding process failed!")
+     *     @OA\Response(
+     *         response="200",
+     *         description="The adding process completed successfully.",
+     *         @OA\MediaType(
+     *             mediaType="application/json",
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response="400",
+     *         description="The adding process failed!",
+     *         @OA\MediaType(
+     *             mediaType="application/json",
+     *         )
+     *     )
      * )
      */
     private function add()
@@ -79,8 +91,20 @@ class Example
      *         )
      *       )
      *     ),
-     *     @OA\Response(response="200", description="The update process completed successfully."),
-     *     @OA\Response(response="400", description="The update process failed!")
+     *     @OA\Response(
+     *         response="200",
+     *         description="The update process completed successfully.",
+     *         @OA\MediaType(
+     *             mediaType="application/json",
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response="400",
+     *         description="The update process failed!",
+     *         @OA\MediaType(
+     *             mediaType="application/json",
+     *         )
+     *     )
      * )
      */
     private function update()
@@ -96,6 +120,7 @@ class Example
         }
         echo json_encode(["response"=>"success","message"=>"The update process completed successfully.","Item"=>["itemId"=>$itemId,"itemName"=>$itemName]]);
     }
+
     /**
      * @OA\Delete(
      *     path="/example/delete/{itemId}",
@@ -109,8 +134,20 @@ class Example
      *             type="integer"
      *         )
      *     ),
-     *     @OA\Response(response="200", description="The delete process completed successfully."),
-     *     @OA\Response(response="400", description="The detele process failed!")
+     *     @OA\Response(
+     *         response="200",
+     *         description="The delete process completed successfully.",
+     *         @OA\MediaType(
+     *             mediaType="application/json",
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response="400",
+     *         description="The detele process failed!",
+     *         @OA\MediaType(
+     *             mediaType="application/json",
+     *         )
+     *     )
      * )
      */
     private function delete()
